@@ -1,0 +1,39 @@
+
+body {
+    background-color: #f0f8ff; 
+  }
+  
+  
+  h1 {
+    color: #000080; 
+  }
+  
+  li {
+    color: #000080; 
+  }
+  
+  .button {
+    background-color: #4169e1; 
+    color: #fff; 
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+  }
+  
+  
+  .button:hover {
+    background-color: #000080; 
+  }
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    text-align: center;
+  }  

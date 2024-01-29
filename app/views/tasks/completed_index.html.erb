@@ -1,0 +1,25 @@
+<h1>達成済みタスクの詳細一覧</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>設定時間</th>
+      <th>達成時間</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @completed_tasks.each do |task| %>
+      <tr>
+        <td><%= task.title %></td>
+        <td><%= task.description %></td>
+        <td><%= task.created_at.strftime('%Y-%m-%d %H:%M:%S') %></td>
+        <td><%= task.completed_at.strftime('%Y-%m-%d %H:%M:%S') %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Back to Tasks', tasks_path %>
+

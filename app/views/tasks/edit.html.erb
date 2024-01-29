@@ -1,0 +1,24 @@
+<h2>タスクを編集</h2>
+
+<%= form_with(model: @task, url: task_path(@task), method: :patch) do |form| %>
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :completed %>
+    <%= form.check_box :completed %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit '更新する' %>
+  </div>
+<% end %>
+
+<%= link_to '戻る', tasks_path %>

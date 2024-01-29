@@ -1,0 +1,22 @@
+<h2>新しいタスクを作成</h2>
+
+<%= form_with(model: @task, url: tasks_path, local: true) do |form| %>
+  <div>
+    <%= form.label :title, 'タイトル' %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :description, '詳細' %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.label :completed, '達成済み' %>
+    <%= form.check_box :completed %>
+  </div>
+
+  <div>
+    <%= form.submit '作成する' %>
+  </div>
+<% end %>
